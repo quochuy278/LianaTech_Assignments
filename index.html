@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/c0686c516e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+      var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch("https://www.lianatech.com/resources/blog.rss", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+    </script>
   </head>
   <header>
     <div class="header__content__container">
@@ -24,7 +40,9 @@
     <div class="nav__container">
       <div class="nav__navigation">
         <ul class="nav__items__container">
-          <li class="nav__items">Liana logo</li>
+          <div class="logo__cont">
+            <img src="/assets/liana_logo.png" width="120" height="40" />
+          </div>
           <li class="nav__items">Company</li>
           <li class="nav__items">Products</li>
           <li class="nav__items">Contact Us</li>
@@ -39,34 +57,80 @@
   </nav>
   <body>
     <main>
-      <div>Hello World</div>
-      <div>
-        <div>Company</div>
-        <div>Products</div>
-        <div>Contact us</div>
-      </div>
-      <div>
-        <div>3000 Clients</div>
-        <div>180 Employees</div>
-        <div>10000 Daily Users</div>
-      </div>
-      <div>
-        <div>Latest news</div>
-        <div>
-          <div>
-            <div>27/07/2016</div>
-            <div>Liana ...</div>
-          </div>
-          <div>
-            <div>27/07/2016</div>
-            <div>Liana ...</div>
-          </div>
-          <div>
-            <div>27/07/2016</div>
-            <div>Liana ...</div>
+      <!-- Hero -->
+      <div class="hero__container">
+        <div class="hero__items__container">
+          <div class="hero__item">Software fueling digital marketing</div>
+          <div class="hero__button_container">
+            <button class="hero__button">Learn more</button>
           </div>
         </div>
       </div>
+      <!-- Cards -->
+      <div class="cards__container">
+        <div class="card__item">
+          <div class="card__item__1">Company</div>
+        </div>
+        <div class="card__item">
+          <div class="card__item__2">Product</div>
+        </div>
+        <div class="card__item">
+          <div class="card__item__3">Contact us</div>
+        </div>
+      </div>
+      <!-- Numbers -->
+      <div class="statistic__container flex">
+        <div class="statistic__item flex">
+          <div class="statistic__icon flex">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="statistic__content__container">
+            <div class="statistic__number">3000</div>
+            <div class="statistic__text">Clients</div>
+          </div>
+        </div>
+        <div class="statistic__item flex">
+          <div class="statistic__icon flex">
+            <i class="far fa-laugh-beam"></i>
+          </div>
+          <div class="statistic__content__container">
+            <div class="statistic__number">180</div>
+            <div class="statistic__text">Employees</div>
+          </div>
+        </div>
+        <div class="statistic__item flex">
+          <div class="statistic__icon flex">
+            <i class="fas fa-globe-asia"></i>
+          </div>
+          <div class="statistic__content__container">
+            <div class="statistic__number">10000</div>
+            <div class="statistic__text">Daily users</div>
+          </div>
+        </div>
+      </div>
+      <div class="blog__container flex">
+        <div class="blog__title">Latest news</div>
+        <div
+          class="tagembed-container"
+          style="width: 80%; height: 180px,background-"
+        >
+          <div
+            class="tagembed-socialwall"
+            data-wall-id="79941"
+            view-url="https://widget.tagembed.com/79941"
+          ></div>
+          <script
+            src="//widget.tagembed.com/embed.min.js"
+            type="text/javascript"
+          ></script>
+        </div>
+      </div>
+      <div class="item"></div>
+      <!-- 
+   
+      
+     
+      
       <div>
         <div>References</div>
         <div>
@@ -90,19 +154,17 @@
             <div>Robert Bosch</div>
             <div>Bosch</div>
           </div>
-          <!-- <div></div> divider -->
+         
           <div>
             <div>Subcribe to our newsletter</div>
             <div>Follow oyurm....</div>
             <div><input /> <button></button></div>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
   </body>
   <footer>
-    <div class="footer__container">
-
-    </div>
+    <div class="footer__container"></div>
   </footer>
 </html>
