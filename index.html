@@ -10,19 +10,38 @@
       src="https://kit.fontawesome.com/c0686c516e.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script>
-      var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
 
-fetch("https://www.lianatech.com/resources/blog.rss", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-    </script>
+    <!-- <script>
+      const RSS_URL = "https://www.lianatech.com/resources/blog.rss";
+      fetch(`https://cors-anywhere.herokuapp.com/${RSS_URL}`, {
+        method: "get",
+        headers: { Origin: RSS_URL },
+      })
+        .then((response) => response.text())
+        .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then((data) => {
+          console.log(data);
+          const items = data.querySelectorAll("item");
+          let html = ``;
+          items.forEach((el) => {
+            console.log(el.length)
+         
+            html += `
+        <article>
+          <img src="${imgUrl}" alt=""/>
+          <h2>
+            <a href="${
+              el.querySelector("link").innerHTML
+            }" target="_blank" rel="noopener">
+              ${el.querySelector("title").innerHTML}
+            </a>
+          </h2>
+        </article>
+      `;
+          });
+          document.body.insertAdjacentHTML("beforeend", html);
+        });
+    </script> -->
   </head>
   <header>
     <div class="header__content__container">
@@ -110,10 +129,7 @@ fetch("https://www.lianatech.com/resources/blog.rss", requestOptions)
       </div>
       <div class="blog__container flex">
         <div class="blog__title">Latest news</div>
-        <div
-          class="tagembed-container"
-          style="width: 80%; height: 180px,background-"
-        >
+        <div class="tagembed-container">
           <div
             class="tagembed-socialwall"
             data-wall-id="79941"
@@ -125,46 +141,48 @@ fetch("https://www.lianatech.com/resources/blog.rss", requestOptions)
           ></script>
         </div>
       </div>
-      <div class="item"></div>
-      <!-- 
-   
-      
-     
-      
-      <div>
-        <div>References</div>
-        <div>
-          <div>
-            <div>Bosch</div>
-            <div>Robert Bosch</div>
-            <div>Bosch</div>
-          </div>
-          <div>
-            <div>Bosch</div>
-            <div>Robert Bosch</div>
-            <div>Bosch</div>
-          </div>
-          <div>
-            <div>Bosch</div>
-            <div>Robert Bosch</div>
-            <div>Bosch</div>
-          </div>
-          <div>
-            <div>Bosch</div>
-            <div>Robert Bosch</div>
-            <div>Bosch</div>
-          </div>
-         
-          <div>
-            <div>Subcribe to our newsletter</div>
-            <div>Follow oyurm....</div>
-            <div><input /> <button></button></div>
-          </div>
+      <!-- References -->
+      <div class="reference__container flex">
+        <div class="reference__title">References</div>
+        <div class="reference__item__container flex" id="reference">
+          <!-- start from here -->
         </div>
-      </div> -->
+      </div>
+      <div>
+        <div>Subcribe to our newsletter</div>
+        <div>Follow oyurm....</div>
+        <div><input /> <button></button></div>
+      </div>
     </main>
   </body>
-  <footer>
-    <div class="footer__container"></div>
+  <footer class="flex">
+    <div class="footer__container">
+      <div class="footer__nav__container flex">
+        <div class="footer__title">Liana Technologies</div>
+        <div class="nav_item_container flex">
+          <div class="footer__nav__item">Company</div>
+          <div class="footer__nav__item">Products</div>
+          <div class="footer__nav__item">Contact us</div>
+          <div class="footer__nav__item">News</div>
+          <div class="footer__nav__item">Intranet</div>
+        </div>
+      </div>
+      <div class="footer__contact__container flex">
+        <div class="footer__contact__content flex">
+          <div class="footer__contact">
+            <div class="footer__contact__title">Sales and inquiries</div>
+            <div class="footer__contact__email">Email: sales@lianatech.com</div>
+            <div class="footer__contact__phone">Phone: +358 10 387 7053</div>
+          </div>
+          <button>Contact us</button>
+        </div>
+        <div class="footer__contact__icon__button flex">
+          <div class="footer__icon__button"><img src="./assets//icons/icons8-facebook.svg" alt="Facebook logo button"/>></i></div>
+          <div class="footer__icon__button"><i class="fab fa-twitter"></i></div>
+          <div class="footer__icon__button"></div>
+        </div>
+      </div>
+    </div>
   </footer>
+  <script src="index.js"></script>
 </html>
