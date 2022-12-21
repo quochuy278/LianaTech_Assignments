@@ -104,7 +104,7 @@
             <i class="fas fa-briefcase"></i>
           </div>
           <div class="statistic__content__container">
-            <div class="statistic__number">3000</div>
+            <div class="statistic__number" id="client">3000</div>
             <div class="statistic__text">Clients</div>
           </div>
         </div>
@@ -113,7 +113,7 @@
             <i class="far fa-laugh-beam"></i>
           </div>
           <div class="statistic__content__container">
-            <div class="statistic__number">180</div>
+            <div class="statistic__number" id="employee">1</div>
             <div class="statistic__text">Employees</div>
           </div>
         </div>
@@ -122,7 +122,7 @@
             <i class="fas fa-globe-asia"></i>
           </div>
           <div class="statistic__content__container">
-            <div class="statistic__number">10000</div>
+            <div class="statistic__number" id="user">10000</div>
             <div class="statistic__text">Daily users</div>
           </div>
         </div>
@@ -148,17 +148,49 @@
           <!-- start from here -->
         </div>
       </div>
-      <div>
-        <div>Subcribe to our newsletter</div>
-        <div>Follow oyurm....</div>
-        <div><input /> <button></button></div>
+      <div class="subscribe__container flex">
+        <div class="subscribe__title">Subcribe to our newsletter</div>
+        <div class="subscribe__text">
+          Follow our story and get the latest promotional news about our
+          products and events
+        </div>
+        <form class="subscribe__button__container flex" id="subcribe__form">
+          <input
+            placeholder="Your email address"
+            class="subscribe__input"
+            id="subscribe__input__id"
+            type="email"
+          />
+          <button class="subscribe__button" type="submit" id="subscribe__btn">
+            Subscribe
+          </button>
+        </form>
+        <div class="error">Input should be a valid email</div>
+
+        <dialog>
+          <div class="dialog__content__container flex">
+            <div class="dialog__content flex">
+              <div class="dialog__message flex">
+                Thank you for subscribing 
+                <img
+                  src="./assets/icons/icons8-favorite-48.svg"
+                  style="margin-left: 10px"
+                />
+              </div>
+              <button class="dialog__button" onclick="{closeDialog()}">
+                Close
+              </button>
+            </div>
+          </div>
+        </dialog>
       </div>
     </main>
   </body>
+
   <footer class="flex">
     <div class="footer__container">
       <div class="footer__nav__container flex">
-        <div class="footer__title">Liana Technologies</div>
+        <div class="footer_title">Liana Technologies</div>
         <div class="nav_item_container flex">
           <div class="footer__nav__item">Company</div>
           <div class="footer__nav__item">Products</div>
@@ -174,12 +206,36 @@
             <div class="footer__contact__email">Email: sales@lianatech.com</div>
             <div class="footer__contact__phone">Phone: +358 10 387 7053</div>
           </div>
-          <button>Contact us</button>
+          <button class="footer__contact__button">Contact us</button>
         </div>
         <div class="footer__contact__icon__button flex">
-          <div class="footer__icon__button"><img src="./assets//icons/icons8-facebook.svg" alt="Facebook logo button"/>></i></div>
-          <div class="footer__icon__button"><i class="fab fa-twitter"></i></div>
-          <div class="footer__icon__button"></div>
+          <div class="footer__icon__button">
+            <a href="https://www.facebook.com/lianatech">
+              <img
+                src="./assets//icons/icons8-facebook.svg"
+                alt="Facebook logo button"
+                class="img__footer__icon__button"
+              />
+            </a>
+          </div>
+          <div class="footer__icon__button">
+            <a href="https://twitter.com/LianaTech">
+              <img
+                src="./assets//icons/icons8-twitter-circled.svg"
+                alt="Facebook logo button"
+                class="img__footer__icon__button"
+              />
+            </a>
+          </div>
+          <div class="footer__icon__button">
+            <a href="https://www.linkedin.com/company/liana-technologies/">
+              <img
+                src="./assets//icons/icons8-linkedin-circled.svg"
+                alt="Facebook logo button"
+                class="img__footer__icon__button"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
