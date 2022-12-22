@@ -6,8 +6,7 @@
 }
 :root {
   --primary-color: #4d8931;
-  --secondary-color: 
-#bababa;
+  --secondary-color: #bababa;
   --primary-hover-color: #d0f0c0;
   --image-fill-color: #f5f5f5;
   --text-color: #fff;
@@ -27,9 +26,6 @@ ul li {
 header {
   width: 100vw;
   background-color: #2d7a02;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
 .header__content__container {
@@ -55,8 +51,6 @@ header ul li {
 }
 nav {
   width: 100vw;
-  display: flex;
-  justify-content: center;
 }
 
 .logo__container {
@@ -71,7 +65,7 @@ nav {
   align-items: center;
 }
 .nav__navigation {
-  width: 25%;
+  width: 40%;
 }
 .nav__items__container {
   display: flex;
@@ -83,11 +77,14 @@ nav {
 } */
 .nav__items {
   color: var(--secondary-color);
-  width: 100px;
-  padding: 5px;
+  width: 120px;
+
   align-items: center;
   display: flex;
   margin: 0 10px 0 10px;
+}
+.logo__container {
+  margin-right: 50px;
 }
 .nav__search__section {
   display: flex;
@@ -120,9 +117,6 @@ nav {
 .hero__container {
   background-color: var(--image-fill-color);
   height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("/assets/program.png");
   background-position: center;
   background-size: cover;
@@ -151,10 +145,7 @@ nav {
 .cards__container {
   margin-top: 30px;
   height: 200px;
-  display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 }
 
 .card__item {
@@ -182,9 +173,7 @@ nav {
   z-index: 1;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   color: var(--text-color);
   font-size: 1.5rem;
   font-weight: 500;
@@ -196,9 +185,7 @@ nav {
   z-index: 1;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   color: var(--text-color);
   font-size: 1.5rem;
   font-weight: 500;
@@ -210,9 +197,7 @@ nav {
   z-index: 1;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   color: var(--text-color);
   font-size: 1.5rem;
   font-weight: 500;
@@ -415,7 +400,7 @@ img svg {
   color: red;
   margin-top: 10px;
 }
-/* Backdrop */
+/* Backdrop dialog*/
 dialog {
   width: 100vw;
   height: 100vh;

@@ -62,7 +62,7 @@ function initCounter(from, to, element, interval) {
     }
   }, interval);
 }
-initCounter(3000, 3003, clientElement, 1000);
+initCounter(3000, 4000, clientElement, 1000);
 initCounter(1, 180, employeeElement, 100);
 initCounter(10000, 11000, userElement, 1000);
 

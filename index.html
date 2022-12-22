@@ -10,40 +10,8 @@
       src="https://kit.fontawesome.com/c0686c516e.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- <script>
-      const RSS_URL = "https://www.lianatech.com/resources/blog.rss";
-      fetch(`https://cors-anywhere.herokuapp.com/${RSS_URL}`, {
-        method: "get",
-        headers: { Origin: RSS_URL },
-      })
-        .then((response) => response.text())
-        .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then((data) => {
-          console.log(data);
-          const items = data.querySelectorAll("item");
-          let html = ``;
-          items.forEach((el) => {
-            console.log(el.length)
-         
-            html += `
-        <article>
-          <img src="${imgUrl}" alt=""/>
-          <h2>
-            <a href="${
-              el.querySelector("link").innerHTML
-            }" target="_blank" rel="noopener">
-              ${el.querySelector("title").innerHTML}
-            </a>
-          </h2>
-        </article>
-      `;
-          });
-          document.body.insertAdjacentHTML("beforeend", html);
-        });
-    </script> -->
   </head>
-  <header>
+  <header class="flex">
     <div class="header__content__container">
       <ul>
         <li>News</li>
@@ -55,11 +23,11 @@
       </ul>
     </div>
   </header>
-  <nav>
+  <nav class="flex">
     <div class="nav__container">
       <div class="nav__navigation">
         <ul class="nav__items__container">
-          <div class="logo__cont">
+          <div class="logo__container">
             <img src="/assets/liana_logo.png" width="120" height="40" />
           </div>
           <li class="nav__items">Company</li>
@@ -77,7 +45,7 @@
   <body>
     <main>
       <!-- Hero -->
-      <div class="hero__container">
+      <div class="hero__container flex">
         <div class="hero__items__container">
           <div class="hero__item">Software fueling digital marketing</div>
           <div class="hero__button_container">
@@ -86,15 +54,15 @@
         </div>
       </div>
       <!-- Cards -->
-      <div class="cards__container">
+      <div class="cards__container flex">
         <div class="card__item">
-          <div class="card__item__1">Company</div>
+          <div class="card__item__1 flex">Company</div>
         </div>
         <div class="card__item">
-          <div class="card__item__2">Product</div>
+          <div class="card__item__2 flex">Product</div>
         </div>
         <div class="card__item">
-          <div class="card__item__3">Contact us</div>
+          <div class="card__item__3 flex">Contact us</div>
         </div>
       </div>
       <!-- Numbers -->
@@ -171,7 +139,7 @@
           <div class="dialog__content__container flex">
             <div class="dialog__content flex">
               <div class="dialog__message flex">
-                Thank you for subscribing 
+                Thank you for subscribing
                 <img
                   src="./assets/icons/icons8-favorite-48.svg"
                   style="margin-left: 10px"
